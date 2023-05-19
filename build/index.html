@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwindcss Technical Documentation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="custom-scrollbar.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body
+    class="m-0 box-border bg-gray-100 p-0 text-gray-700 dark:bg-gray-800 dark:text-gray-300"
+  >
+    <!--Container-->
+    <div class="md:grid md:grid-cols-4 md:gap-3">
+      <!--Navigation-->
+      <div class="navbar-bg md:col-span-1">
+        <div class="navbar-bg">
+          <div
+            class="fixed top-0 flex w-full justify-between bg-gray-100 px-3 py-3 text-base font-semibold text-gray-700 dark:bg-gray-800 dark:text-gray-300 md:w-1/4 md:bg-gray-200 md:text-lg md:text-gray-700 md:dark:bg-gray-700 md:dark:text-gray-300"
+          >
+            <header>Tailwindcss Documentation</header>
+
+            <div class="cursor-pointer px-4 md:hidden" id="burger">
+              <svg
+                class="w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </div>
+          </div>
+          <nav class="h-full overflow-y-auto md:fixed md:top-10">
+            <div class="">
+              <ul class="hidden md:mb-16 md:block" id="menu">
+                <li class="mt-14 border-b-2 border-gray-400 p-3 md:mt-5">
+                  <a href="#introduction">Introduction</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#installation">Installation</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#configuration">Configuration</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#usage">Usage</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#importing">Importing the pre-built CSS file</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#using_postCSS">Using PostCSS</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#utility_classes">Utility Classes</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#customization">Customization</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#responsive_design">Responsive Design</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#plugin">Plugin</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#dark_mode">Dark Mode</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#accessibility">Accessibility</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#browser_support">Browser Support</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#performance">Performance</a>
+                </li>
+
+                <li class="border-b-2 border-gray-400 p-3">
+                  <a href="#resources">Resources</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!--Contents-->
+      <main class="mx-3 text-justify md:col-span-3">
+        <section id="tailwind" class="scroll-mt-14 pt-20 md:my-5 md:pt-5">
+          <h2 class="hidden text-center text-xl font-bold md:block md:text-2xl">
+            Tailwindcss Documentation
+          </h2>
+          <p class="text-center italic md:my-3">
+            Welcome to our technical documentation page! Here you will find
+            information on how to use and interact with our software.
+          </p>
+        </section>
+
+        <!---->
+        <section id="introduction" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Introduction</h2>
+          <p class="p-graph">
+            Tailwindcss is a utility-first CSS framework that allows you to
+            quickly build custom user interfaces. Instead of writing custom CSS
+            classes, you can use pre-defined utility classes to style your HTML
+            elements. This makes it easy to create responsive designs and reduce
+            the amount of custom CSS you need to write.
+          </p>
+        </section>
+
+        <!---->
+        <section id="installation" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Installation</h2>
+          <p class="p-graph">
+            To use Tailwindcss, you will need to install it using a package
+            manager. You can use one of the following methods:
+          </p>
+
+          <h3 class="text-center font-semibold">NPM</h3>
+
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4></h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code> npm install tailwindcss </code>
+            </div>
+          </div>
+
+          <h3 class="text-center font-semibold">YARN</h3>
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm">csharp</h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code> yarn add tailwindcss </code>
+            </div>
+          </div>
+        </section>
+
+        <!---->
+        <section id="configuration" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Configuration</h2>
+          <p class="p-graph">
+            Tailwindcss comes with a default configuration file, but you can
+            customize it to fit your needs. The configuration file is used to
+            define your color palette, typography settings, and more.
+          </p>
+          <p class="p-graph">
+            To generate a default configuration file, run the following command:
+          </p>
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm">csharp</h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code> npx tailwindcss init </code>
+            </div>
+          </div>
+          <p class="p-graph">
+            This will generate a
+            <span class="font-semibold italic">tailwind.config.js</span> file in
+            your project directory.
+          </p>
+        </section>
+
+        <!---->
+        <section id="usage" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Usage</h2>
+          <p class="p-graph">
+            To use Tailwindcss in your project, you will need to include it in
+            your CSS file. You can do this by importing the pre-built CSS file,
+            or by using a build tool like PostCSS.
+          </p>
+        </section>
+
+        <!---->
+        <section id="importing" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Importing</h2>
+          <p class="p-graph">
+            Add the following line to your HTML file to include the pre-built
+            CSS file:
+          </p>
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm">bash</h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code>
+                &lt;link rel=&quot;stylesheet&quot;
+                href=&quot;https://cdn.tailwindcss.com&quot;&gt;
+              </code>
+            </div>
+          </div>
+        </section>
+
+        <!---->
+        <section id="using_postCSS" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Using PostCSS</h2>
+          <ol class="mt-5 list-inside list-decimal">
+            <li class="mb-6">
+              Install PostCSS and the Tailwindcss plugin:
+              <div class="div-container">
+                <div class="w-full p-2 dark:bg-gray-700">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-sm"></h4>
+                    <div class="flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="h-6 w-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                        />
+                      </svg>
+                      <span class="mx-2">Copy code</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-code">
+                  <code> npm install postcss-cli postcss tailwindcss </code>
+                </div>
+              </div>
+            </li>
+            <li class="mb-6">
+              Create a
+              <span class="font-semibold italic">postcss.config.js</span> file
+              in your project directory:
+
+              <div class="div-container">
+                <div class="w-full p-2 dark:bg-gray-700">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-sm">javascript</h4>
+                    <div class="flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="h-6 w-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                        />
+                      </svg>
+                      <span class="mx-2">Copy code</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-code">
+                  <code>
+                    module.exports = { plugin: [ require('tailwindcss'),
+                    require('autoprefixer'), ], }
+                  </code>
+                </div>
+              </div>
+            </li>
+            <li class="mb-6">
+              Create a CSS file and import Tailwindcss:
+              <div class="div-container">
+                <div class="w-full p-2 dark:bg-gray-700">
+                  <div class="flex items-center justify-between">
+                    <h4 class="text-sm">css</h4>
+                    <div class="flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="h-6 w-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                        />
+                      </svg>
+                      <span class="mx-2">Copy code</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="div-code">
+                  <code class="text-justify">
+                    @import "tailwindcss/base"; <br />
+                    @import "tailwindcss/components"; <br />
+                    @import "tailwindcss/utilities";
+                  </code>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!---->
+        <section id="utility_classes" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Utility Classes</h2>
+          <p class="p-graph">
+            Tailwindcss includes a large number of utility classes that you can
+            use to style your HTML elements. These classes are organized into
+            the following categories:
+          </p>
+
+          <ul class="my-5 ml-5 list-inside list-disc">
+            <li>Layout</li>
+            <li>Flexbox</li>
+            <li>Grid</li>
+            <li>Spacing</li>
+            <li>Sizing</li>
+            <li>Typography</li>
+            <li>Colors</li>
+            <li>Backgrounds</li>
+            <li>Borders</li>
+            <li>Effects</li>
+          </ul>
+
+          <p class="p-graph">
+            For example, to center an element on the page, you can use the
+            <span class="font-semibold italic"
+              >'flex justify-center items-center'</span
+            >
+            classes.
+          </p>
+
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm">html</h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code>
+                &lt;div class="flex items-center justify-center"&gt;
+                &lt;p&gt;Hello, World!&lt;/p&gt; &lt;/div&gt;
+              </code>
+            </div>
+          </div>
+        </section>
+
+        <!---->
+        <section id="customization" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Customization</h2>
+          <p class="p-graph">
+            Tailwindcss is designed to be customizable, so you can use it to
+            match your branding and design requirements. You can customize the
+            following aspects of Tailwindcss:
+          </p>
+
+          <ul class="my-5 ml-5 list-inside list-disc">
+            <li>Color Pallete</li>
+            <li>Typography</li>
+            <li>Spacing</li>
+            <li>Sizing</li>
+            <li>Borders</li>
+            <li>Backgrounds</li>
+            <li>Shadows</li>
+          </ul>
+
+          <p class="p-graph">
+            To customize these settings, update the '<span
+              class="font-semobold italic"
+              >tailwind.config.js</span
+            >' file in your project directory
+          </p>
+        </section>
+
+        <!---->
+        <section id="responsive_design" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Responsive Design</h2>
+          <p class="p-graph">
+            Tailwindcss includes responsive utility classes that allow you to
+            style elements differently based on screen size. These classes are
+            named using the following syntax: '<span
+              class="font-semibold italic"
+              >{screen}:{utility}</span
+            >'.
+          </p>
+          <p class="p-graph">
+            For example, to change the text color of an element on small
+            screens, you can use the '<span class="font-semibold italic"
+              >text-red-500 sm:text-green-500</span
+            >' classes.
+          </p>
+
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm">html</h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code>
+                &lt;p class="text-red-500 sm:text-green-500"&gt; Hello, World!
+                &lt;/p&gt;
+              </code>
+            </div>
+          </div>
+        </section>
+
+        <!---->
+        <section id="plugin" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Plugin</h2>
+          <p class="p-graph">
+            Tailwindcss has a large number of plugins that extend its
+            functionality.
+          </p>
+        </section>
+
+        <!---->
+        <section id="dark_mode" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Dark Mode</h2>
+          <p class="p-graph">
+            Tailwindcss includes built-in support for dark mode, which allows
+            you to style elements differently when the user's device is in dark
+            mode. To enable dark mode, you can add the '<span
+              class="font-semibold italic"
+              >dark</span
+            >' class to your HTML element. You can also use the '<span
+              class="font-semibold italic"
+              >dark:</span
+            >' prefix to apply a dark mode style to a specific utility class.
+          </p>
+
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm">html</h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code
+                >&lt;div class="bg-white dark:bg-gray-800"&gt; &lt;p
+                class="text-gray-800 dark:text-white"&gt; Hello,
+                World!&lt;/p&gt; &lt;/div&gt;
+              </code>
+            </div>
+          </div>
+        </section>
+
+        <!---->
+        <section id="accessibility" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Accessibility</h2>
+          <p class="p-graph">
+            Tailwindcss is designed to be accessible and includes a number of
+            utility classes that help you build accessible designs. For example,
+            you can use the '<span class="font-semibold italic">sr-only</span>'
+            class to hide an element from sighted users while still making it
+            available to screen readers.
+          </p>
+
+          <div class="div-container">
+            <div class="w-full p-2 dark:bg-gray-700">
+              <div class="flex items-center justify-between">
+                <h4 class="text-sm">html</h4>
+                <div class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
+                    />
+                  </svg>
+                  <span class="mx-2">Copy code</span>
+                </div>
+              </div>
+            </div>
+            <div class="div-code">
+              <code>
+                &lt;button class="bg-blue-500 hover:bg-blue-700 text-white
+                font-bold py-2 px-4 rounded"&gt; &lt;span class="sr-only">
+                Submit &lt;/span&gt; Submit &lt;/button&gt;
+              </code>
+            </div>
+          </div>
+        </section>
+
+        <!---->
+        <section id="browser_support" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Browser Support</h2>
+          <p class="p-graph">
+            Tailwindcss supports all modern browsers, including Chrome, Firefox,
+            Safari, Edge, and Internet Explorer 11. However, some features may
+            not be available in older browsers.
+          </p>
+        </section>
+
+        <!---->
+        <section id="performance" class="my-6 scroll-mt-10">
+          <h2 class="h-section">Performance</h2>
+          <p class="p-graph">
+            Tailwindcss is designed to be performant and lightweight. By
+            default, it generates a large number of utility classes, but you can
+            configure it to only generate the classes you need. This reduces the
+            size of the CSS file and improves performance.
+          </p>
+        </section>
+
+        <!---->
+        <section id="resources" class="my-6">
+          <h2 class="h-section">Resources</h2>
+          <p class="p-graph">
+            Here are some resources you can use to learn more about Tailwindcss:
+          </p>
+
+          <ul class="my-5 ml-5 list-inside list-disc">
+            <li>
+              <a
+                href="#tailwind"
+                class="hover:font-semibold hover:text-gray-100"
+                >Official Tailwindcss documentation</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tailwind"
+                class="hover:font-semibold hover:text-gray-100"
+                >Tailwindcss GitHub repository</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tailwind"
+                class="hover:font-semibold hover:text-gray-100"
+                >Tailwind Starter Kit</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tailwind"
+                class="hover:font-semibold hover:text-gray-100"
+                >Tailwind Components</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tailwind"
+                class="hover:font-semibold hover:text-gray-100"
+                >Tailwind Play
+              </a>
+              - an online playground for Tailwindcss.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

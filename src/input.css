@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-bg {
+  @apply bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300;
+}
+
+.nav-list {
+  @apply sm:border-b-2 sm:border-gray-400 sm:p-3;
+}
+
+.h-section {
+  @apply text-xl font-semibold;
+}
+.p-graph {
+  @apply pl-4 pt-3;
+}
+
+.div-container {
+  @apply my-3 overflow-hidden rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-900;
+}
+
+.div-code {
+  @apply bg-white p-6 text-center shadow hover:bg-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:hover:bg-gray-600;
+}
